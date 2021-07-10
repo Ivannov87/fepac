@@ -545,11 +545,9 @@ hr {
 
 @media (max-width: 575px) {
     #scrollUp {
-        right: 16px
+        /* right: 16px; */
     }
-    .back-social{
-        right: 16px
-    }
+    
 }
 
 #scrollUp:hover {
