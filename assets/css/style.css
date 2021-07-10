@@ -2906,29 +2906,29 @@ hr {
 }
 
 .slider-area {
-    margin-top: -1px
+    margin-top: -100px
 }
 
     .slider-area .hero__caption {
         margin-left: 27px;
-        padding-top: 150px
+        padding-top: 0px
     }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
     .slider-area .hero__caption {
-        padding-top: 70px
+        padding-top: -100px
     }
 }
 
 @media only screen and (min-width: 576px) and (max-width: 767px) {
     .slider-area .hero__caption {
-        padding-top: 70px
+        padding-top: -100px
     }
 }
 
 @media (max-width: 575px) {
     .slider-area .hero__caption {
-        padding-top: 70px
+        padding-top: -100px
     }
 }
 
@@ -3004,7 +3004,8 @@ hr {
 }
 
 .slider-area .hero__caption .stock-text h2 {
-    font-size: 70px;
+    /* font-size: 70px; */
+    font-size: 65px;
     font-weight: 800;
     margin: 0;
     line-height: 1;
@@ -3015,25 +3016,28 @@ hr {
 
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
     .slider-area .hero__caption .stock-text h2 {
-        font-size: 110px
+        font-size: 30px
     }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
     .slider-area .hero__caption .stock-text h2 {
-        font-size: 60px
+        /* font-size: 60px */
+        font-size: 30px;
     }
 }
 
 @media only screen and (min-width: 576px) and (max-width: 767px) {
     .slider-area .hero__caption .stock-text h2 {
-        font-size: 52px
+        /* font-size: 52px */
+        font-size: 30px;
     }
 }
 
 @media (max-width: 575px) {
     .slider-area .hero__caption .stock-text h2 {
-        font-size: 27px;
+        /* font-size: 27px; */
+        font-size: 30px;
         margin-bottom: 25px
     }
 }
