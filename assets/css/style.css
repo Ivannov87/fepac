@@ -544,9 +544,9 @@ hr {
 }
 
 @media (max-width: 575px) {
-    #scrollUp {
-        /* right: 16px; */
-    }
+    /* #scrollUp {
+        /* right: 16px; 
+    } */
     
 }
 
