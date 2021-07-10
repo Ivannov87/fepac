@@ -547,6 +547,9 @@ hr {
     #scrollUp {
         right: 16px
     }
+    .back-social{
+        right: 16px
+    }
 }
 
 #scrollUp:hover {
