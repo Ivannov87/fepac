@@ -1017,7 +1017,8 @@
                         $('#visitas').text(JSON.stringify(data));
                     },
                     error: function(err){
-                        alert(JSON.stringify(err));
+                        //alert(JSON.stringify(err));
+                        $('#visitas').text(JSON.stringify(err));
                     }
                 });
             });
