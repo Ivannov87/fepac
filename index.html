@@ -519,6 +519,59 @@
         </div>
         <!-- Services Area End -->
 
+        <br>
+        <br>
+        <br>
+        <section id="count" class="count-area">
+            <div class="count-area">
+                <div class="container">
+                    <div class="count-wrapper count-bg" data-background="assets/img/gallery/section-bg3.jpg">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-4 col-md-4 col-sm-6">
+                                <div class="count-clients">
+                                    <div class="single-counter">
+                                        <div class="count-number">
+                                            <!-- <span class="counter"></span> -->
+                                        </div>
+                                        <div class="count-text">
+                                            <!-- <p></p>
+                                            <h5></h5> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-6">
+                                <div class="count-clients">
+                                    <div class="single-counter">
+                                        <div class="count-number">
+                                            <span id="visitas" class="counter">0</span>
+                                        </div>
+                                        <div class="count-text">
+                                            <p>Total</p>
+                                            <h5>Visitas</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-6">
+                                <div class="count-clients">
+                                    <div class="single-counter">
+                                        <div class="count-number">
+                                            <!-- <span class="counter"></span> -->
+                                        </div>
+                                        <div class="count-text">
+                                            <!-- <p></p>
+                                            <h5></h5> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
 
         <!-- contact with us Start -->
         <section id="contact" class="contact-with-area">
@@ -601,6 +654,10 @@
         <!-- <section class="contact-with-area-footer"  data-background="assets/img/gallery/section-bg2.jpg" -->
         <section class="contact-with-area-footer ftr" style="width: 100%; height: 5%;">
         </section>
+
+
+
+
     </main>
     <footer>
         <!-- Footer Start-->
@@ -948,8 +1005,22 @@
                 'overflow': 'visible'
             });
         });
+
         $(document).ready(function () {
 
+            $(function () {
+                $.ajax({
+                    url: 'contador.php',
+                    type: 'POST',
+                    success: function (data) {
+                        alert(data);
+                        $('#visitas').text(JSON.stringify(data));
+                    },
+                    error: function(err){
+                        alert(JSON.stringify(err));
+                    }
+                });
+            });
         });
     </script>
 
