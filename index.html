@@ -1014,11 +1014,11 @@
                     type: 'POST',
                     success: function (data) {
                         alert(data);
-                        $('#visitas').text(JSON.stringify(data));
+                        $('#visitas').text(data);
                     },
                     error: function(err){
                         //alert(JSON.stringify(err));
-                        $('#visitas').text(JSON.stringify(err));
+                        $('#visitas').text(err);
                     }
                 });
             });
