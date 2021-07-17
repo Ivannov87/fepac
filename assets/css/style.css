@@ -2843,7 +2843,7 @@ hr {
 .slider-height {
     min-height: 900px;
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: top;
     background-size: cover
 }
 
@@ -3120,7 +3120,9 @@ hr {
 
 .hero-overly {
     position: relative;
-    z-index: 1
+    z-index: 1;
+   
+
 }
 
     .hero-overly::before {

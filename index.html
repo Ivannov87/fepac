@@ -8,7 +8,7 @@
     <meta name="description" content="Educación Científica, Tecnológica y Humanística hoy y mañana.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- <link rel="manifest" href="site.webmanifest"> -->
-    <link rel="shortcut icon" type="image/x-icon" href="assets/img/logo/fepac.png" class="border rounded-circle">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/logo/fepac_new_.png" class="border rounded-circle">
 
     <!-- CSS here -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -30,6 +30,13 @@
             background-color: rgba(116, 0, 61, 0.9);
 
         }
+
+        .back {
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
     </style>
 
 
@@ -45,7 +52,8 @@
             <div class="preloader-inner position-relative">
                 <div class="preloader-circle"></div>
                 <div class="preloader-img pere-text">
-                    <img src="assets/img/logo/fepac.png" alt="">
+                    <!-- <img class="rounded-circle" src="assets/img/logo/fepac_new.png" alt=""> -->
+                    <img class="rounded-circle" src="assets/img/logo/fepac_black.png" alt="">
                 </div>
             </div>
         </div>
@@ -63,11 +71,11 @@
                             <div class="col-xl-1 col-lg-1 col-md-1">
                                 <div class="logo">
                                     <!-- logo-1 -->
-                                    <a href="index.html" class="big-logo"><img src="assets/img/logo/fepac_95.png"
-                                            alt=""></a>
+                                    <a href="index.html" class="big-logo"><img class="rounded-circle"
+                                            src="assets/img/logo/fepac_black_95.png" alt=""></a>
                                     <!-- logo-2 -->
-                                    <a href="index.html" class="small-logo"><img src="assets/img/logo/fepac_47.png"
-                                            alt=""></a>
+                                    <a href="index.html" class="small-logo"><img class="rounded-circle"
+                                            src="assets/img/logo/fepac_black_47.png" alt=""></a>
                                 </div>
                             </div>
                             <div class="col-xl-10 col-lg-10 col-md-10">
@@ -178,9 +186,7 @@
         <!-- slider Area Start-->
 
         <div class="slider-area ">
-
-
-            <div class="hero-overly slider-height d-flex align-items-center"
+            <div class="hero-overly slider-height d-flex align-items-center back"
                 data-background="assets/img/hero/vitrubio.gif">
                 <div class="container">
                     <div class="row">
@@ -1016,7 +1022,7 @@
                         alert(data);
                         $('#visitas').text(data);
                     },
-                    error: function(err){
+                    error: function (err) {
                         //alert(JSON.stringify(err));
                         $('#visitas').text(err);
                     }
