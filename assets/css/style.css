@@ -2763,7 +2763,7 @@ hr {
 }
 
 .header-transparent {
-    position: absolute;
+    /* position: absolute; */
     top: 0;
     right: 0;
     left: 0;
@@ -2841,9 +2841,9 @@ hr {
 }
 
 .slider-height {
-    min-height: 900px;
+    min-height: 760px;
     background-repeat: no-repeat;
-    background-position: top;
+    background-position: center;
     background-size: cover
 }
 
@@ -2855,19 +2855,19 @@ hr {
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
     .slider-height {
-        min-height: 600px
+        min-height: 456px
     }
 }
 
 @media only screen and (min-width: 576px) and (max-width: 767px) {
     .slider-height {
-        min-height: 600px
+        min-height: 339px
     }
 }
 
 @media (max-width: 575px) {
     .slider-height {
-        min-height: 400px
+        min-height: 339px
     }
 }
 
