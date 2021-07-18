@@ -2820,7 +2820,7 @@ hr {
 }
 
 .header-area .slicknav_btn {
-    top: -45px
+    /* top: -45px */
 }
 
 .slicknav_menu .slicknav_nav a:hover {
