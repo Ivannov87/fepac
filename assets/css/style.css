@@ -5768,6 +5768,9 @@ hr {
 .form-contact label {
     font-size: 14px
 }
+.error{
+    color: red;
+}
 
 .form-contact .form-group {
     margin-bottom: 30px
