@@ -14,7 +14,7 @@ require 'PHPMailer-master/PHPMailer-master/src/SMTP.php';
 //Create an instance; passing `true` enables exceptions
 $mail = new PHPMailer(true);
 
-    $to = "bot@khosting.com.mx";
+    $to = "fepac@fepac.com.mx";
     $from = $_REQUEST['email'];
     $name = $_REQUEST['name'];
     $subject = $_REQUEST['subject'];
@@ -24,18 +24,18 @@ try {
     //Server settings
     $mail->SMTPDebug = 2;                      //Enable verbose debug output
     $mail->isSMTP();                                            //Send using SMTP
-    $mail->Host       = 'mail.khosting.com.mx';                     //Set the SMTP server to send through
+    $mail->Host       = 'mail.fepac.com.mx';                     //Set the SMTP server to send through
     $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-    $mail->Username   = 'bot@khosting.com.mx';                     //SMTP username
-    $mail->Password   = 'AvM5kVcD0v2';                               //SMTP password
+    $mail->Username   = 'fepac@fepac.com.mx';                     //SMTP username
+    $mail->Password   = 'fepac2021.!';                               //SMTP password
     // $mail->SMTPSecure = 'tls';            //Enable implicit TLS encryption
     $mail->Port       = 587;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
     //Recipients
     $mail->setFrom($from, $name);
     
-    $mail->addAddress('viridiana.cp@khosting.com.mx');     //Add a recipient
-    $mail->addAddress('ivan.rv@khosting.com.mx');               //Name is optional
+    //$mail->addAddress('viridiana.cp@khosting.com.mx');     //Add a recipient
+    //$mail->addAddress('ivan.rv@khosting.com.mx');               //Name is optional
     $mail->addReplyTo($from);
     // $mail->addCC('cc@example.com');
     // $mail->addBCC('bcc@example.com');
