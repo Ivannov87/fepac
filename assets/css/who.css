@@ -35,8 +35,8 @@ figure.snip1477 img {
 }
 figure.snip1477 .title {
   position: absolute;
-  top: 58%;
-  left: 25px;
+  top: 88%;
+  left: 10px;
   padding: 5px 10px 10px;
 }
 figure.snip1477 .title:before,
@@ -96,14 +96,16 @@ figure.snip1477 h4 {
 }
 figure.snip1477 figcaption {
   position: absolute;
-  bottom: 42%;
+  bottom: 15%;
   left: 25px;
   text-align: left;
   opacity: 0;
-  padding: 5px 60px 5px 10px;
-  font-size: 0.8em;
+  /* padding: 5px 60px 5px 10px; */
+  padding:5px ​20px 5px 10px;
+  /* font-size: 0.8em; */
+  font-size: 12px;
   font-weight: 500;
-  letter-spacing: 1.5px;
+  /* letter-spacing: 1.5px; */
 }
 figure.snip1477 figcaption p {
   margin: 0;

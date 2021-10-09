@@ -1,0 +1,697 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Fomento Educativo Politécnico A.C. | Registro</title>
+    <meta name="description" content="Educación Científica, Tecnológica y Humanística hoy y mañana.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="manifest" href="site.webmanifest"> -->
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/logo/fepac.png" class="border rounded-circle">
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/slicknav.css">
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <!-- <link rel="stylesheet" href="assets/css/fontawesome-all.min.css"> -->
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/font-awesome.css">
+    <link rel="stylesheet" href="assets/css/themify-icons.css">
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <link rel="stylesheet" href="assets/css/nice-select.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/who.css">
+    <link rel="stylesheet" href="assets/css/services.css">
+    <style>
+        .ftr {
+            background-color: rgba(116, 0, 61, 0.9);
+
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+
+
+    <!-- Preloader Start -->
+    <div id="preloader-active">
+        <div class="preloader d-flex align-items-center justify-content-center">
+            <div class="preloader-inner position-relative">
+                <div class="preloader-circle"></div>
+                <div class="preloader-img pere-text">
+                    <img src="assets/img/logo/fepac.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Preloader Start -->
+    <header>
+        <!-- Header Start -->
+
+        <!-- Header End -->
+    </header>
+
+    <br>
+    <br>
+    <br>
+
+    <main>
+
+
+        <!-- slider Area Start-->
+
+
+        <section class="support-company-area fix pt-10">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lx-6 col-sm-6">
+                        <div class="card">
+                            <form action="registro.php" method="POST">
+                                <div class="card-header">
+                                    <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button> -->
+                                    <h5 class="modal-tittle">Registro</h5>
+                                </div>
+                                <div class="card-body">
+                                    <div class="col-xl-12 col-sm-12">
+                                        <!-- Datos personales -->
+                                        <div class="form-group">
+                                            <strong><label>Datos personales</label></strong>
+                                            <input id="rnombre" name="rnombre" type="text" class="form-control"
+                                                placeholder="Nombre Completo" required />
+                                            <br>
+
+                                            <strong><label>País</label></strong>
+                                            <br>
+
+                                            <input id="rpais" name="rpais" type="text" class="form-control"
+                                                placeholder="País" required />
+
+                                            <br>
+
+                                            <strong><label for="Sedad"> Edad</label></strong>
+                                            <div class="form-group">
+                                                <select class="form-control" id="Sedad">
+                                                    <option selected>18 - 24</option>
+                                                    <option>25 - 29</option>
+                                                    <option>30 - 40</option>
+                                                    <option>41 - 50</option>
+                                                    <option>51 - más</option>
+                                                </select>
+                                            </div>
+                                            <br>
+                                            <br>
+                                            <input id="redad" name="redad" type="hidden" />
+
+                                            <strong><label>Genero</label></strong>
+                                            <div class="form-check">
+                                                <input id="rhombre" class="form-check-input" type="radio"
+                                                    name="exampleRadios" id="exampleRadios1" value="H">
+                                                <label class="form-check-label" for="exampleRadios1">
+                                                    Hombre
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input id="rmujer" class="form-check-input" type="radio"
+                                                    name="exampleRadios" id="exampleRadios2" value="M">
+                                                <label class="form-check-label" for="exampleRadios2">
+                                                    Mujer
+                                                </label>
+                                            </div>
+                                            <br>
+                                            <input id="rgenero" name="rgenero" type="hidden" />
+
+                                            <input id="remail" name="remail" type="email" class="form-control"
+                                                placeholder="Correo electrónico" required />
+
+                                            <input id="rtel" name="rtel" type="text" class="form-control"
+                                                placeholder="Teléfono" onkeypress="return isTel(event)" />
+
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-12 col-sm-12">
+                                        <!-- Escolaridad -->
+                                        <div class="form-group">
+                                            <strong><label>Escolaridad</label></strong>
+                                            <br>
+                                            <!-- <strong><label>Escuela de Procedencia</label></strong> -->
+                                            <input id="rescuela" name="rescuela" type="text" class="form-control"
+                                                placeholder="Escuela de Procedencia" />
+                                            <!-- <div class="form-group">
+                                            <label for="Sescuela">Escuela de Procedencia</label>
+                                            <select class="form-control" id="Sescuela">
+                                                <option>IPN</option>
+                                                <option>UNAM</option>
+                                                <option>CESCIJUC</option>
+                                                <option>CLEU</option>
+                                                <option>Otra</option>
+                                            </select>
+                                        </div> -->
+
+                                            <br>
+                                            <!-- <label>Nivel de Estudios</label> -->
+                                            <strong><label for="SNivel"> Nivel de
+                                                    Estudios</label></strong>
+                                            <div class="form-group">
+
+                                                <select class="form-control" id="SNivel">
+                                                    <option selected>Primaria</option>
+                                                    <option>Secundaria</option>
+                                                    <option>Preparatoria</option>
+                                                    <option>Universidad </option>
+                                                    <option>Posgrado</option>
+                                                </select>
+                                            </div>
+                                            <input id="rnivel" name="rnivel" type="hidden" />
+
+                                        </div>
+                                        <br>
+                                        <br>
+                                        <br>
+                                        <!-- Curso -->
+                                        <div class="form-group">
+                                            <strong><label>Curso</label></strong>
+                                            <input id="rcurso" name="rcurso" type="text" class="form-control"
+                                                placeholder="Curso" readonly required />
+
+                                            <strong><label>Fecha del Curso</label></strong>
+                                            <input id="rfcurso" name="rfcurso" type="text" class="form-control"
+                                                placeholder="Fecha Curso" readonly required />
+
+                                            <input id="rnow" name="rnow" type="hidden" />
+
+                                            <strong><label>Codigo de Curso</label></strong>
+                                            <input id="rccurso" name="rccurso" type="text" maxlength="4" minlength="4"
+                                                class="form-control" placeholder="----"
+                                                onkeypress="return isNumber(event)" required />
+                                        </div>
+
+                                    </div>
+                                    <div class="col-xl-12 col-sm-12">
+                                        <!--    PREGUNTA 1 -->
+                                        <div class="form-group">
+                                            <p>¿Cómo calificas la conferencia del día de hoy?</p>
+                                            <div class="form-check ">
+                                                <input id="q11" class="form-check-input q1" type="radio" name="q1"
+                                                    value="Muy buena">
+                                                <label class="form-check-label" for="q11">
+                                                    Muy buena
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input id="q12" class="form-check-input q1" type="radio" name="q1"
+                                                    value="Buena">
+                                                <label class="form-check-label" for="q12">
+                                                    Buena
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input id="q13" class="form-check-input q1" type="radio" name="q1"
+                                                    value="Regular">
+                                                <label class="form-check-label" for="q13">
+                                                    Regular
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input id="q14" class="form-check-input q1" type="radio" name="q1"
+                                                    value="Mala">
+                                                <label class="form-check-label" for="q14">
+                                                    Mala
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input id="q15" class="form-check-input q1" type="radio" name="q1"
+                                                    value="Muy mala">
+                                                <label class="form-check-label" for="q15">
+                                                    Muy mala
+                                                </label>
+                                            </div>
+                                            <br>
+                                            <input id="rq1" name="rq1" type="hidden" />
+                                        </div>
+                                        <!-- PREGUNTA 2 -->
+                                        <div class="form-group">
+                                            <p>¿Qué tan satisfecho estás con la información analizada en esta
+                                                conferencia?</p>
+                                            <div class="form-check">
+                                                <input id="q21" class="form-check-input q2" type="radio" name="q2"
+                                                    value="Extremadamente satisfecho">
+                                                <label class="form-check-label" for="q21">
+                                                    Extremadamente satisfecho
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input id="q22" class="form-check-input q2" type="radio" name="q2"
+                                                    value="Muy satisfecho">
+                                                <label class="form-check-label" for="q22">
+                                                    Muy satisfecho
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input id="q23" class="form-check-input q2" type="radio" name="q2"
+                                                    value="Moderadamente satisfecho">
+                                                <label class="form-check-label" for="q23">
+                                                    Moderadamente satisfecho
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input id="q24" class="form-check-input q2" type="radio" name="q2"
+                                                    value="Poco satisfecho">
+                                                <label class="form-check-label" for="q24">
+                                                    Poco satisfecho
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input id="q25" class="form-check-input q2" type="radio" name="q2"
+                                                    value="No satisfecho">
+                                                <label class="form-check-label" for="q25">
+                                                    No satisfecho
+                                                </label>
+                                            </div>
+                                            <br>
+                                            <input id="rq2" name="rq2" type="hidden" />
+                                        </div>
+
+                                        <!-- PREGUNTA 3 -->
+                                        <div class="form-group">
+                                            <p>
+                                                ¿Qué tanto interés tendrías en participar para la creación de la Carrera
+                                                de Ingeniería en Criminalística dentro del Instituto Politécnico
+                                                Nacional?</p>
+                                            <div class="form-check">
+                                                <input id="q31" class="form-check-input q3" type="radio" name="q3"
+                                                    value="Totalmente">
+                                                <label class="form-check-label" for="q31">
+                                                    Totalmente
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input id="q32" class="form-check-input q3" type="radio" name="q3"
+                                                    value="Mucho">
+                                                <label class="form-check-label" for="q32">
+                                                    Mucho
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input id="q33" class="form-check-input q3" type="radio" name="q3"
+                                                    value="Regular">
+                                                <label class="form-check-label" for="q33">
+                                                    Regular
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input id="q34" class="form-check-input q3" type="radio" name="q3"
+                                                    value="Poco">
+                                                <label class="form-check-label" for="q34">
+                                                    Poco
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input id="q35" class="form-check-input q3" type="radio" name="q3"
+                                                    value="Muy poco">
+                                                <label class="form-check-label" for="q35">
+                                                    Muy poco
+                                                </label>
+                                            </div>
+                                            <br>
+                                            <input id="rq3" name="rq3" type="hidden" />
+                                        </div>
+
+                                        <!-- PREGUNTA 4 -->
+                                        <div class="form-group">
+                                            <p>¿Contribuirías con un donativo a FEPAC para fomentar estas actividades?
+                                            </p>
+                                            <div class="form-check">
+                                                <input id="q41" class="form-check-input q4" type="radio" name="q4"
+                                                    value="Si">
+                                                <label class="form-check-label" for="q41">
+                                                    Si
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input id="q42" class="form-check-input q4" type="radio" name="q4"
+                                                    value="No">
+                                                <label class="form-check-label" for="q42">
+                                                    No
+                                                </label>
+                                            </div>
+
+                                            <br>
+                                            <input id="rq4" name="rq4" type="hidden" />
+                                        </div>
+
+                                        <!-- PREGUNTA 5 -->
+                                        <div class="form-group">
+                                            <p>¿Cuál es tu opinión sobre el ciclo de conferencias para la creación de la
+                                                carrera de Ingeniería en Criminalística y su relación con esta última?
+                                            </p>
+                                            <textarea id="rq5" name="rq5" type="text"
+                                                style="width: 100%; height: 200px;" required minlength="10"></textarea>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="card-footer text-center">
+                                    <button id="btnEnviar" type="submit" class="btn red-btn2">Enviar</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <br>
+    <br>
+    <br>
+    <footer>
+        <!-- Footer Start-->
+        <div class="footer-main">
+            <div class="footer-area footer-padding">
+                <!-- <div class="container"> -->
+                <!-- Copy-Right -->
+                <div class="row align-items-center">
+                    <div class="col-xl-12">
+                        <div class="footer-copy-right text-center">
+                            <p>
+                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                Copyright &copy;
+                                <script>document.write(new Date().getFullYear());</script> Todos los Derechos Reservados
+                                |
+                                <a href="https:/khosting.com.mx" target="_blank">KHosting</a>
+                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- </div> -->
+            </div>
+        </div>
+        <!-- Footer End-->
+    </footer>
+
+
+    <!-- MODAL -->
+    <div class="modal fade" id="mdlCongratulations" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-tittle">Felicidades</h5>
+                </div>
+                <div class="modal-body">
+                    <div class="row justify-content-center">
+                        <div class="card">
+
+                            <div class="card-body">
+                                <div class="support-company-area fix pt-10">
+                                    <div class="support-wrapper align-items-end">
+                                        <div class="center-content">
+
+                                            <div class="section-tittle section-tittle2 mb-55">
+                                                <div class="front-text">
+                                                    <h2> ¡ Gracias por Registrarte !</h2>
+                                                    <p>No se te olvide seguirnos en nuestras redes sociales</p>
+                                                </div>
+                                                <span class="back-text"></span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <div class="text-center">
+                                    <button id="btnSalir" type="button" class="btn red-btn2">Salir</button>
+                                </div>
+                            </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END MODAL -->
+
+    <!-- SOCIAL -->
+    <div class="back-social">
+        <!-- <a href="#"><i class="fa fa-twitter"></i></a> -->
+        <a href="https://www.facebook.com/FomentoEducativoPolitecnico/"><i class="fa fa-facebook-f"></i></a>
+        <!-- <a href="#"><i class="fa fa-instagram"></i></a> -->
+        <a href="https://youtube.com/channel/UC9ac4oG8Ev4Dk2WwDEEJ-cA"><i class="fa fa-youtube"></i></a>
+        <a href="https://instagram.com/fepac_ipn/"><i class="fa fa-instagram"></i></a>
+
+    </div>
+    <!-- JS here -->
+
+    <!-- All JS Custom Plugins Link Here here -->
+    <script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
+    <!-- Jquery, Popper, Bootstrap -->
+    <script src="./assets/js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="./assets/js/popper.min.js"></script>
+    <script src="./assets/js/bootstrap.min.js"></script>
+    <!-- Jquery Mobile Menu -->
+    <script src="./assets/js/jquery.slicknav.min.js"></script>
+
+    <!-- Jquery Slick , Owl-Carousel Plugins -->
+    <script src="./assets/js/owl.carousel.min.js"></script>
+    <script src="./assets/js/slick.min.js"></script>
+    <!-- Date Picker -->
+    <script src="./assets/js/gijgo.min.js"></script>
+    <!-- One Page, Animated-HeadLin -->
+    <script src="./assets/js/wow.min.js"></script>
+    <script src="./assets/js/animated.headline.js"></script>
+    <script src="./assets/js/jquery.magnific-popup.js"></script>
+
+    <!-- Scrollup, nice-select, sticky -->
+    <script src="./assets/js/jquery.scrollUp.min.js"></script>
+    <script src="./assets/js/jquery.nice-select.min.js"></script>
+    <script src="./assets/js/jquery.sticky.js"></script>
+
+    <!-- counter , waypoint -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+    <script src="./assets/js/jquery.counterup.min.js"></script>
+
+    <!-- contact js -->
+    <script src="./assets/js/contact.js"></script>
+    <script src="./assets/js/jquery.form.js"></script>
+    <script src="./assets/js/jquery.validate.min.js"></script>
+    <script src="./assets/js/mail-script.js"></script>
+    <script src="./assets/js/jquery.ajaxchimp.min.js"></script>
+
+    <!-- Jquery Plugins, main Jquery -->
+    <script src="./assets/js/plugins.js"></script>
+    <script src="./assets/js/main.js"></script>
+
+    <script src="./assets/js/who.js"></script>
+    <script src="./assets/js/services.js"></script>
+
+    <script type="text/javascript">
+        $(window).on('load', function () {
+            $('#preloader-active').delay(450).fadeOut('slow');
+            $('body').delay(450).css({
+                'overflow': 'visible'
+            });
+        });
+        $(document).ready(function () {
+
+
+            //var genero = '';
+            var curso_index = 0;
+
+            var cursos = ['Femenicidio, una investigación con perspectiva de género'];
+
+            // var fechas = ['2021-09-30'];//pruebas
+            // var horas = ['00:00:00', '23:59:59'];//pruebas
+            var fechas = ['2021-10-07'];//producción
+            var horas = ['17:30:00', '20:00:00'];//producción
+
+
+
+
+
+            //inicializar valores
+            $(function () {
+
+                //$('#mdlCongratulations').modal('show');
+
+                $('#rgenero').val('H');
+                $('#redad').val('18 - 24');
+                $('#rhombre').attr('checked', 'checked');
+                $('#rnivel').val('Primaria');
+                $('#rcurso').val(cursos[curso_index]);
+                $('#rfcurso').val(fechas[curso_index]);
+                ValidDate();
+
+                //pre elegir opciones
+                $('#q11').click();
+                $('#q21').click();
+                $('#q31').click();
+                $('#q41').click();
+                var registro = GetNow();
+                $('#rnow').val(registro);
+
+            });
+
+            $('#btnEnviar').on('click', function () {
+                var registro = GetNow();
+                $('#rnow').val(registro);
+
+                var edad = $('#Sedad option:selected').val();
+                $('#redad').val(edad);
+
+                var nivel = $('#SNivel option:selected').val();
+                $('#rnivel').val(nivel);
+
+
+            });
+
+            
+            $('#btnSalir').on('click', function () {
+                window.location.href = 'https://google.com.mx';
+            });
+
+            $('#rhombre').on('click', function () {
+                $('#rgenero').val('H');
+            });
+
+            $('#rmujer').on('click', function () {
+                $('#rgenero').val('M');
+            });
+
+
+
+            $('.q1').on('click', function () {
+                var q1 = $(this).val();
+                $('#rq1').val(q1);
+                //alert($('#rq1').val());
+            });
+
+            $('.q2').on('click', function () {
+                var q2 = $(this).val();
+                $('#rq2').val(q2);
+                //alert($('#rq2').val());
+            });
+
+            $('.q3').on('click', function () {
+                var q3 = $(this).val();
+                $('#rq3').val(q3);
+                //alert($('#rq3').val());
+            });
+
+            $('.q4').on('click', function () {
+                var q4 = $(this).val();
+                $('#rq4').val(q4);
+                //alert($('#rq4').val());
+            });
+
+
+            function ValidDate() {
+
+                var current = GetNow();
+                var idx = 0;
+
+                var ini = fechas[0] + ' ' + horas[0];
+                var fin = fechas[0] + ' ' + horas[1];
+
+                if (ValDate(current, ini, fin))
+                    Visible(true, idx);
+                else
+                    Visible(false, idx);
+            }
+
+        });
+
+
+        function Visible(f, idx) {
+
+            switch (idx) {
+                case 0:
+                    if (f)
+                        $('#btnEnviar').show();
+                    else
+                        $('#btnEnviar').hide();
+                    break;
+
+
+            }
+        }
+
+        function ValDate(current, ini, fin) {
+            var r = false;
+            //alert(current + '\n' + ini + '\n' + fin);
+            if (Date.parse(current) >= Date.parse(ini) && Date.parse(current) <= Date.parse(fin)) {
+
+                r = true;
+            }
+
+
+            return r;
+        }
+
+        function GetDate() {
+            var currentdate = new Date();
+            var datetime = currentdate.getFullYear() + "-"
+                + pad((currentdate.getMonth() + 1), 2) + "-"
+                + pad(currentdate.getDate(), 2);
+            return datetime;
+        }
+
+        function GetDate(input) {
+            var currentdate = new Date(input);
+            var datetime = currentdate.getFullYear() + "-"
+                + pad((currentdate.getMonth() + 1), 2) + "-"
+                + pad(currentdate.getDate(), 2);
+            return datetime;
+        }
+
+        function GetNow() {
+            var currentdate = new Date();
+            var datetime = currentdate.getFullYear() + "-"
+                + pad((currentdate.getMonth() + 1), 2) + "-"
+                + pad(currentdate.getDate(), 2) + " "
+                + pad(currentdate.getHours(), 2) + ":"
+                + pad(currentdate.getMinutes(), 2) + ":"
+                + pad(currentdate.getSeconds(), 2);
+            return datetime;
+        }
+
+        function pad(str, max) {
+            str = str.toString();
+            return str.length < max ? pad("0" + str, max) : str;
+        }
+
+        function isNumber(evt) {
+            evt = (evt) ? evt : window.event;
+            var charCode = (evt.which) ? evt.which : evt.keyCode;
+
+            if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+                return false;
+            }
+            return true;
+        }
+
+        function isTel(evt) {
+            evt = (evt) ? evt : window.event;
+            var charCode = (evt.which) ? evt.which : evt.keyCode;
+
+            if ((charCode > 31 && charCode < 43 || charCode > 44) && (charCode < 48 || charCode > 57 && charCode < 187 || charCode > 188)) {
+                return false;
+            }
+            return true;
+        }
+
+    </script>
+
+</body>
+
+</html>

@@ -2855,19 +2855,20 @@ hr {
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
     .slider-height {
-        min-height: 456px
+        min-height: 495px
     }
 }
 
 @media only screen and (min-width: 576px) and (max-width: 767px) {
     .slider-height {
-        min-height: 339px
+        min-height: 375px 
+        /* sin nada para la esquela */
     }
 }
 
 @media (max-width: 575px) {
     .slider-height {
-        min-height: 339px
+        min-height: 214px
     }
 }
 
@@ -2904,10 +2905,11 @@ hr {
         padding: 25px 0
     }
 }
-
+/* 
 .slider-area {
-    margin-top: -100px
-}
+    margin-top: -100px ;
+      sin nada para la esquela  
+} */
 
     .slider-area .hero__caption {
         margin-left: 27px;

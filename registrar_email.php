@@ -1,6 +1,5 @@
-<?php
-//Import PHPMailer classes into the global namespace
-//These must be at the top of your script, not inside a function
+<?php 
+
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
@@ -10,19 +9,29 @@ require 'PHPMailer-master/PHPMailer-master/src/PHPMailer.php';
 require 'PHPMailer-master/PHPMailer-master/src/SMTP.php';
 
 
-
 //Create an instance; passing `true` enables exceptions
 $mail = new PHPMailer(true);
 
-    $to = "contacto@fepac.com.mx";
-    $from = $_REQUEST['email'];
-    $name = $_REQUEST['name'];
-    $subject = $_REQUEST['subject'];
-    $cmessage = $_REQUEST['message'];
+    $to = $_REQUEST['remail'];
+    $from = 'educacion@fepac.com.mx';
+    $name = 'Educacion FEPAC';
+    $subject = 'Registro Satisfactorio';
+    $cmessage = '';
 
-    $reg = ''.$name.'|edad|genero|'.$from.'|telefono|escuela|nivel|curso|fechacurso|fregistro|codigo|'.$cmessage;
-    
-    $archivo = "contacto.txt";
+$nombre = $_REQUEST['rnombre'];
+$edad = $_REQUEST['redad'];
+$email = $_REQUEST['remail'];
+$tel = $_REQUEST['rtel'];
+$escuela = $_REQUEST['rescuela'];
+$nivel= $_REQUEST['rnivel'];
+$curso= $_REQUEST["rcurso"];
+$fecha= $_REQUEST["rfcurso"];
+$now = $_REQUEST["rnow"];
+$codigo= $_REQUEST["rccurso"];
+
+$reg = ''.$nombre.'|'.$edad.'|'.$email.'|'.$tel.'|'.$escuela.'|'.$nivel.'|'.$curso.'|'.$fecha.'|'.$now.'|'.$codigo;
+
+    $archivo = "constancias.txt";
     $f = fopen($archivo,"a");
     
     if($f)
@@ -30,7 +39,12 @@ $mail = new PHPMailer(true);
         fwrite($f,"\r\n".$reg);
         fclose($f);
     }
-
+    
+    // echo '<script type="text/javascript">
+    // alert("Te has registrado satisfactoriamente.");
+    // window.location.href="index.html";
+    // </script>';
+   $cmessage=" Le notificamos que usted {$nombre} se ha registrado a la conferencia  {$curso}  ";
 
 try {
     //Server settings
@@ -38,7 +52,7 @@ try {
     $mail->isSMTP();                                            //Send using SMTP
     $mail->Host       = 'mail.fepac.com.mx';                     //Set the SMTP server to send through
     $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-    $mail->Username   = 'contacto@fepac.com.mx';                     //SMTP username
+    $mail->Username   = 'educacion@fepac.com.mx';                     //SMTP username
     $mail->Password   = 'fepac2021.!';                               //SMTP password
     // $mail->SMTPSecure = 'tls';            //Enable implicit TLS encryption
     $mail->Port       = 587;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
@@ -59,7 +73,7 @@ try {
     //Content
 
     
-    $subject = "FEPAC Mexico.";
+    //$subject = "FEPAC Mexico.";
 
     $logo = 'img/logo/loder.png';
     $link = '#';
@@ -75,6 +89,8 @@ try {
     $body .= "<tr><td style='border:none;'><strong>Asunto:</strong> {$subject}</td></tr>";
     $body .= "<tr><td></td></tr>";
     $body .= "<tr><td colspan='2' style='border:none;'>{$cmessage}</td></tr>";
+    $body .= "<tr><td></td></tr>";
+    $body .= "<tr><td colspan='2' style='border:none;'><small>No olvides suscribierte a nuestras redes sociales</small></td></tr>";
     $body .= "</tbody></table>";
     $body .= "</body></html>";
 
@@ -85,10 +101,17 @@ try {
 
     $mail->send();
     echo '<script type="text/javascript">
-    alert("El mensaje ha sido enviado.");
+    alert("Te has registrado satisfactoriamente.");
     window.location.href="index.html";
     </script>';
 
 } catch (Exception $e) {
     echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
 }
+
+
+
+  
+
+
+?>

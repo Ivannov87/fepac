@@ -78,7 +78,7 @@ $(document).ready(function(){
                     }
                 })
                 alert('Mensaje Enviado');
-                    window.location.href= "https://fepac.com.mx";
+                    window.location.href= "https://fepac.com.mx/index.html";
             }
         })
     })
