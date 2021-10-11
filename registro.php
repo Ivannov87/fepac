@@ -43,7 +43,7 @@ if ($f2) {
 }
 
 
-$reg3 = '' . $nombre . '|' . $pais . '|' . $edad . '|' . $genero . '|' . $email .'|'. $q1 . '|' . $q2 . '|' . $q3 . '|' . $q4 . '|' . $q5;
+$reg3 = '' . $nombre . '|' . $pais . '|' . $edad . '|' . $genero . '|' . $email .'|'. $now .'|'. $q1 . '|' . $q2 . '|' . $q3 . '|' . $q4 . '|' . $q5;
 
 $archivo3 = "user_comment.txt";
 $f3 = fopen($archivo3, "a");

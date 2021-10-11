@@ -14,22 +14,23 @@ require 'PHPMailer-master/PHPMailer-master/src/SMTP.php';
 //Create an instance; passing `true` enables exceptions
 $mail = new PHPMailer(true);
 
-    $to = "contacto@fepac.com.mx";
-    $from = $_REQUEST['email'];
-    $name = $_REQUEST['name'];
-    $subject = $_REQUEST['subject'];
-    $cmessage = $_REQUEST['message'];
+$to = "contacto@fepac.com.mx";
+$from = $_REQUEST['email'];
+$name = $_REQUEST['name'];
+$subject = $_REQUEST['subject'];
+$cmessage = $_REQUEST['message'];
+$zone = new DateTimeZone('America/Mexico_City');
+$dt = new DateTime("now", $zone);
+$now = $dt->format("Y-m-d") . "T" . $dt->format("H:i:s");
+$reg = '' . $name . '|edad|genero|' . $from . '|telefono|escuela|nivel|curso|fechacurso|' . $now . '|codigo|' . $cmessage;
 
-    $reg = ''.$name.'|edad|genero|'.$from.'|telefono|escuela|nivel|curso|fechacurso|fregistro|codigo|'.$cmessage;
-    
-    $archivo = "contacto.txt";
-    $f = fopen($archivo,"a");
-    
-    if($f)
-    {
-        fwrite($f,"\r\n".$reg);
-        fclose($f);
-    }
+$archivo = "contacto.txt";
+$f = fopen($archivo, "a");
+
+if ($f) {
+    fwrite($f, "\r\n" . $reg);
+    fclose($f);
+}
 
 
 try {
@@ -45,9 +46,9 @@ try {
 
     //Recipients
     $mail->setFrom($from, $name);
-    
+
     $mail->addAddress($to);     //Add a recipient
-    
+
     $mail->addReplyTo($from);
     // $mail->addCC('cc@example.com');
     // $mail->addBCC('bcc@example.com');
@@ -58,7 +59,7 @@ try {
 
     //Content
 
-    
+
     $subject = "FEPAC Mexico.";
 
     $logo = 'img/logo/loder.png';
@@ -88,7 +89,6 @@ try {
     alert("El mensaje ha sido enviado.");
     window.location.href="index.html";
     </script>';
-
 } catch (Exception $e) {
     echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
 }
