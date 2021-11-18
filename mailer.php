@@ -22,7 +22,7 @@ $cmessage = $_REQUEST['message'];
 $zone = new DateTimeZone('America/Mexico_City');
 $dt = new DateTime("now", $zone);
 $now = $dt->format("Y-m-d") . "T" . $dt->format("H:i:s");
-$reg = '' . $name . '|edad|genero|' . $from . '|telefono|escuela|nivel|curso|fechacurso|' . $now . '|codigo|' . $cmessage;
+$reg = '' . $name . '|pais|edad|genero|' . $from . '|telefono|escuela|nivel|curso|fechacurso|' . $now . '|codigo|' . $cmessage;
 
 $archivo = "contacto.txt";
 $f = fopen($archivo, "a");
@@ -40,7 +40,7 @@ try {
     $mail->Host       = 'mail.fepac.com.mx';                     //Set the SMTP server to send through
     $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
     $mail->Username   = 'contacto@fepac.com.mx';                     //SMTP username
-    $mail->Password   = 'fepac2021.!';                               //SMTP password
+    $mail->Password   = 'c0NtaCt0F3pAc.!';                               //SMTP password
     // $mail->SMTPSecure = 'tls';            //Enable implicit TLS encryption
     $mail->Port       = 587;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 

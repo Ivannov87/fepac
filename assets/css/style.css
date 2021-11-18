@@ -3210,6 +3210,12 @@ hr {
     text-transform: capitalize
 }
 
+.slider-area .hero-cap.hero-cap3 h2 {
+    font-size: 60px;
+    font-weight: 700;
+    /* text-transform: capitalize */
+}
+
 @media only screen and (min-width: 576px) and (max-width: 767px) {
     .slider-area .hero-cap.hero-cap2 h2 {
         font-size: 37px

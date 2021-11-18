@@ -19,8 +19,8 @@ $q1 = $_REQUEST['rq1'];
 $q2 = $_REQUEST['rq2'];
 $q3 = $_REQUEST['rq3'];
 $q4 = $_REQUEST['rq4'];
-$q5 = $_REQUEST['rq5'];
-
+$q5 = str_replace(array("\n","\r","\r\n"),' ' ,$_REQUEST['rq5']);
+$q5 = preg_replace('/\s+/',' ',$q5);
 
 $reg = '' . $nombre . '|' . $pais . '|' . $edad . '|' . $genero . '|' . $email . '|' . $tel . '|' . $escuela . '|' . $nivel . '|' . $curso . '|' . $fecha . '|' . $now . '|' . $codigo;
 
@@ -43,7 +43,8 @@ if ($f2) {
 }
 
 
-$reg3 = '' . $nombre . '|' . $pais . '|' . $edad . '|' . $genero . '|' . $email .'|'. $now .'|'. $q1 . '|' . $q2 . '|' . $q3 . '|' . $q4 . '|' . $q5;
+
+$reg3 = $nombre . '|' . $pais . '|' . $edad . '|' . $genero . '|' . $email .'|'. $now .'|'. $q1 . '|' . $q2 . '|' . $q3 . '|' . $q4 . '|' . $q5;
 
 $archivo3 = "user_comment.txt";
 $f3 = fopen($archivo3, "a");
