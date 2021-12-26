@@ -534,7 +534,7 @@ hr {
     height: 50px;
     width: 50px;
     right: 31px;
-    bottom: 40px;
+    bottom: 80px;
     color: #fff;
     font-size: 20px;
     text-align: center;
@@ -557,7 +557,7 @@ hr {
 .back-social {
     position: fixed;
     right: 31px;
-    bottom:90px;
+    bottom:130px;
     z-index: 99999;
   }
   

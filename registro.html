@@ -72,7 +72,7 @@
                 <div class="row justify-content-center">
                     <div class="col-lx-6 col-sm-6">
                         <div class="card">
-                            <form action="registro.php" method="POST">
+                            <form id="formRegistro" action="registro.php" method="POST" onclick="SendF();">
                                 <div class="card-header">
                                     <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
@@ -360,6 +360,8 @@
                                 </div>
                                 <div class="card-footer text-center">
                                     <button id="btnEnviar" type="submit" class="btn red-btn2">Enviar</button>
+                                    <input type="hidden" id="token" name="token">
+                                    <input type="hidden" id="action" name="action" value="procesar">
                                 </div>
                             </form>
                         </div>
@@ -495,7 +497,11 @@
     <script src="./assets/js/who.js"></script>
     <script src="./assets/js/services.js"></script>
 
+    <script type="text/javascript"
+        src="https://www.google.com/recaptcha/api.js?render=6Ld7gUMdAAAAABKcIF4cTj9AVON9xRAlRB9HQUWX"></script>
+    <script type="text/javascript" src="./assets/js/captcha.js"></script>
     <script type="text/javascript">
+
         $(window).on('load', function () {
             $('#preloader-active').delay(450).fadeOut('slow');
             $('body').delay(450).css({
@@ -508,11 +514,11 @@
             //var genero = '';
             var curso_index = 0;
 
-            var cursos = ['Criminalística aplicada al derecho'];
+            var cursos = ['El mercado electrónico en la valuación forense'];
 
-            // var fechas = ['2021-09-30'];//pruebas
+            // var fechas = ['2021-11-20'];//pruebas
             // var horas = ['00:00:00', '23:59:59'];//pruebas
-            var fechas = ['2021-11-18'];//producción
+            var fechas = ['2021-12-09'];//producción
             var horas = ['17:30:00', '20:00:00'];//producción
 
 
@@ -551,13 +557,13 @@
 
                 var nivel = $('#SNivel option:selected').val();
                 $('#rnivel').val(nivel);
-                
+
                 //var msg = $('#rq5').val().replace('\n', ' ').replace('\r','').replace('\n\r',' ');
                 //$('#rq5').val(msg);
 
             });
 
-            
+
             $('#btnSalir').on('click', function () {
                 window.location.href = 'https://google.com.mx';
             });

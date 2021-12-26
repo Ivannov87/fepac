@@ -59,7 +59,7 @@ $(document).ready(function(){
                     type:"POST",
                     data: $(form).serialize(),
                     url:"mailer.php",
-                    success: function() {
+                    success: function(data) {
                         // $('#contactForm :input').attr('disabled', 'disabled');
                         // $('#contactForm').fadeTo( "slow", 1, function() {
                         //     $(this).find(':input').attr('disabled', 'disabled');
@@ -68,17 +68,20 @@ $(document).ready(function(){
                         //     $('.modal').modal('hide');
 		                // 	$('#success').modal('show');
                         // })
+                        alert('Mensaje Enviado correctamente !');
+                        window.location.href= "https://fepac.com.mx/index.html";
+                        
                     },
-                    error: function() {
+                    error: function(err) {
                         // $('#contactForm').fadeTo( "slow", 1, function() {
                         //     $('#error').fadeIn()
                         //     $('.modal').modal('hide');
 		                // 	$('#error').modal('show');
                         // })
+                        alert(err);
                     }
                 })
-                alert('Mensaje Enviado');
-                    window.location.href= "https://fepac.com.mx/index.html";
+                
             }
         })
     })
