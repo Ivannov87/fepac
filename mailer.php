@@ -5,6 +5,7 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
+require 'getparams.php';
 require 'PHPMailer-master/PHPMailer-master/src/Exception.php';
 require 'PHPMailer-master/PHPMailer-master/src/PHPMailer.php';
 require 'PHPMailer-master/PHPMailer-master/src/SMTP.php';
@@ -45,6 +46,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     if (!is_null($token) && strlen($token) > 0) {
         // if ($datos_respuesta["success"] == '1' && $datos_respuesta["action"] == $action && $datos_respuesta["score"] >= 0.4) {
 
+        $params = new Params();
+        $param= $params->getpwd();
         //Create an instance; passing `true` enables exceptions
 
         $mail = new PHPMailer(true);
@@ -76,7 +79,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             $mail->Host       = 'mail.fepac.com.mx';                     //Set the SMTP server to send through
             $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
             $mail->Username   = 'contacto@fepac.com.mx';                     //SMTP username
-            $mail->Password   = 'F3pAConT4cT0.!';                               //SMTP password
+            $mail->Password   = $param;                              //SMTP password
             // $mail->SMTPSecure = 'tls';            //Enable implicit TLS encryption
             $mail->Port       = 587;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
