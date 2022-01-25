@@ -56,7 +56,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
         $reg = '' . $nombre . '|' . $pais . '|' . $edad . '|' . $genero . '|' . $email . '|' . $tel . '|' . $escuela . '|' . $nivel . '|' . $curso . '|' . $fecha . '|' . $now . '|' . $codigo;
 
-        $archivo = "constancias.txt";
+        $archivo = "functions/constancias.txt";
         $f = fopen($archivo, "a");
 
         if ($f) {
@@ -66,7 +66,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
         $reg2 = '' . $q1 . '|' . $q2 . '|' . $q3 . '|' . $q4 . '|' . $q5;
 
-        $archivo2 = "comentarios.txt";
+        $archivo2 = "functions/comentarios.txt";
         $f2 = fopen($archivo2, "a");
 
         if ($f2) {
@@ -78,7 +78,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
         $reg3 = $nombre . '|' . $pais . '|' . $edad . '|' . $genero . '|' . $email .'|'. $now .'|'. $q1 . '|' . $q2 . '|' . $q3 . '|' . $q4 . '|' . $q5;
 
-        $archivo3 = "user_comment.txt";
+        $archivo3 = "functions/user_comment.txt";
         $f3 = fopen($archivo3, "a");
 
         if ($f3) {

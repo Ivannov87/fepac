@@ -160,61 +160,115 @@
         </div>
         <!-- Header End -->
     </header>
+
     <main>
 
         <!-- slider Area Start-->
 
         <!-- slider Area End-->
         <!-- Services Area Start -->
-        <section>
-            <div class="services-area1 section-padding30">
-                <div class="container">
-                    <!-- section tittle  ocultar aqui para diciembre colocar un hidden en el row de abajito -->
-                    <div class="row"> 
-                        <div class="col-lg-12">
-                            <div class="section-tittle mb-55">
-                                <div class="front-text">
-                                    <h2 class="">Constancia</h2>
-                                </div>
-                                <span class="back-text">Descarga</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <h2>Diagnóstico del intervalo post mortem en la descomposición cadavérica.</h2>
 
-                        <div class="col-lx-12 col-sm-12 justify-content-center">
-                            <form method="POST">
-                                <div class="card-body">
+        <br>
+        <section id="contact" class="contact-with-area">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <p>¿Te gustaria participar como conferencista con nosotros?</p>
+                        <p> <Strong>¡  No lo pienses más !</Strong> envianos tú información </p>
+                    </div>
+                    <div class="col-lg-8">
+                        <h2 class="contact-title ">Registrate</h2>
+                    </div>
+                    <div class="col-lg-8">
+                        <form id="reclutamientoForm" class="form-contact contact_form" action="talento.php"
+                            method="post" novalidate="novalidate" onclick="SendForm();">
+                            <div class="row">
+
+                                <div class="col-sm-8">
                                     <div class="form-group">
-                                        <p>Ingresa el correo electrónico con el que te registraste : </p>
+                                        <input id="iap" class="form-control valid " name="iap" type="text"
+                                            onfocus="this.placeholder = ''"
+                                            onblur="this.placeholder = 'Apellido Paterno'"
+                                            placeholder="Apellido Paterno" required>
                                     </div>
-                                    <div class="row">
-
-                                        <div class="col-xl-4 col-sm-4">
-                                            <input id="remail" type="email" class="form-control"
-                                                placeholder="Correo electrónico" required />
-                                        </div>
-                                        <div class="col-xl-4 col-sm-4">
-                                            <button id="btnEnviar" type="button" class="btn red-btn2">Enviar</button>
-                                        </div>
-                                    <p><span>Vigente hasta 2 de Febrero del 2022. </span></p>
-                                    </div>
-
                                 </div>
-                            </form>
+                                <div class="col-sm-8">
+                                    <div class="form-group">
+                                        <input id="iam" class="form-control valid " name="iam" type="text"
+                                            onfocus="this.placeholder = ''"
+                                            onblur="this.placeholder = 'Apellido Materno'"
+                                            placeholder="Apellido Materno" required>
+                                    </div>
+                                </div>
+                                <div class="col-sm-8">
+                                    <div class="form-group">
+                                        <input id="iname" class="form-control valid " name="iname" type="text"
+                                            onfocus="this.placeholder = ''" onblur="this.placeholder = 'Nombre'"
+                                            placeholder="Nombre" required>
+                                    </div>
+                                </div>
+                                <div class="col-sm-8">
+                                    <div class="form-group">
+                                        <input id="iemail" class="form-control valid" name="iemail" type="email"
+                                            onfocus="this.placeholder = ''"
+                                            onblur="this.placeholder = 'Correo Electrónico'"
+                                            placeholder="Correo Electrónico" required>
+                                    </div>
+                                </div>
+                                <div class="col-sm-8">
+                                    <div class="form-group">
+                                        <input id="itema" class="form-control" name="itema" type="text"
+                                            onfocus="this.placeholder = ''"
+                                            onblur="this.placeholder = 'Tema que te gustaría impatir'"
+                                            placeholder="Tema que te gustaria impartir" required>
+                                    </div>
+                                </div>
 
-                        </div>
+                                <div class="col-sm-8">
+                                    <div class="form-group">
+                                        <input id="iocupacion" class="form-control" name="iocupacion" type="text"
+                                            onfocus="this.placeholder = ''" onblur="this.placeholder = 'Ocupación'"
+                                            placeholder="Ocupación" required>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-8">
+                                    <div class="form-group">
+                                        <textarea id="iacerca" class="form-control w-100 " name="iacerca" type="text"
+                                            rows="10" onfocus="this.placeholder = ''"
+                                            onblur="this.placeholder = 'Breve curriculum vitae'"
+                                            placeholder="Breve curriculum vitae" style="height: 600px;" required
+                                            minlength="10"></textarea>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                            <div class="col-sm-8">
+                                <p> Recuerda que <strong>Fomento Educativo Politécnico A.C</strong> es un organismo sin fines de lucro
+                                    por lo que nuestro objetivo principal es fomentar
+                                    con nuestro público el conocimiento de forma gratuita. </p>
+                                <p><strong> La particiáción queda sujeta a evaluación del consejo organizador. </strong></p>
+                            </div>
+
+                            <div class="form-group mt-3">
+                                <button type="submit" id="btnSend"
+                                    class="button button-contactForm boxed-btn">Enviar</button>
+                                <input type="hidden" id="token" name="token">
+                                <input type="hidden" id="action" name="action" value="procesar">
+                            </div>
+                        </form>
                     </div>
-                </div>
 
+                </div>
             </div>
-            </div>
-            </div>
+
+
         </section>
         <!-- Services Area End -->
 
     </main>
+
     <footer>
         <!-- Footer Start-->
         <div class="footer-main">
@@ -281,34 +335,24 @@
     <script src="./assets/js/jquery.counterup.min.js"></script>
 
     <!-- contact js -->
-    <script src="./assets/js/contact.js"></script>
+    <script src="./assets/js/reclutamiento.js"></script>
     <script src="./assets/js/jquery.form.js"></script>
     <script src="./assets/js/jquery.validate.min.js"></script>
-    <script src="./assets/js/mail-script.js"></script>
+    <!-- <script src="./assets/js/mail-script.js"></script> -->
     <script src="./assets/js/jquery.ajaxchimp.min.js"></script>
 
     <!-- Jquery Plugins, main Jquery -->
     <script src="./assets/js/plugins.js"></script>
     <script src="./assets/js/main.js"></script>
 
+    <script type="text/javascript"
+        src="https://www.google.com/recaptcha/api.js?render=6Ld7gUMdAAAAABKcIF4cTj9AVON9xRAlRB9HQUWX"></script>
+    <script type="text/javascript" src="assets/js/captcha.js"></script>
+
 
     <script type="text/javascript">
         $(document).ready(function () {
-            $('#btnEnviar').on('click', function () {
 
-                var email = $('#remail').val();
-                if (IsvalidEmail(email) && email.trim().length > 0) {
-                    window.location.href = "https://fepac.com.mx/constanciasfepac/" + email + ".pdf";
-                }
-                else
-                    alert('Es requerido ingresar correo electrónico valido.');
-
-            });
-
-            function IsvalidEmail($email) {
-                var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
-                return emailReg.test($email);
-            }
         });
     </script>
 </body>

@@ -2,7 +2,7 @@
 
 //function counter()
 //{
-    $archivo = "counter.txt";
+    $archivo = "functions/counter.txt";
     $f = fopen($archivo,"r");
     $contador =0;
 

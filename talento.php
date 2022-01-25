@@ -46,24 +46,32 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     if (!is_null($token) && strlen($token) > 0) {
         // if ($datos_respuesta["success"] == '1' && $datos_respuesta["action"] == $action && $datos_respuesta["score"] >= 0.4) {
 
+        $Paterno = $_REQUEST['iap'];
+        $Materno = $_REQUEST['iam'];
+        $Nombre = $_REQUEST['iname'];
+        $Email= $_REQUEST["iemail"];
+        $Tema = $_REQUEST['itema'];
+        $Ocupacion = $_REQUEST['iocupacion'];
+        $Acerca = $_REQUEST['iacerca'];
+
         $params = new Params();
-        $param= $params->getpwd();
+        $param= $params->getrecpwd();
         //Create an instance; passing `true` enables exceptions
 
         $mail = new PHPMailer(true);
         $mail->CharSet = "UTF-8";
 
-        $to = "contacto@fepac.com.mx";
-        $from = $_REQUEST['email'];
-        $name = $_REQUEST['name'];
-        $subject = $_REQUEST['subject'];
-        $cmessage = $_REQUEST['message'];
+        $to = "reclutamiento@fepac.com.mx";
+        $from = $Email;
+        $name = $Paterno ." ". $Materno ." ".$Nombre;
+        $subject = "Registro para reclutamiento";
+      
         $zone = new DateTimeZone('America/Mexico_City');
         $dt = new DateTime("now", $zone);
         $now = $dt->format("Y-m-d") . "T" . $dt->format("H:i:s");
-        $reg = '' . $name . '|pais|edad|genero|' . $from . '|telefono|escuela|nivel|curso|fechacurso|' . $now . '|codigo|' . $cmessage;
+        $reg = $Paterno . '|'.$Materno . '|'.$Nombre . '|' . $Email . '|' . $Tema . '|'.$Ocupacion . '|'.$Acerca . '|' . $now;
 
-        $archivo = "functions/contacto.txt";
+        $archivo = "functions/reg_reclutamiento.txt";
         $f = fopen($archivo, "a");
 
         if ($f) {
@@ -78,7 +86,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             $mail->isSMTP();                                            //Send using SMTP
             $mail->Host       = 'mail.fepac.com.mx';                     //Set the SMTP server to send through
             $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-            $mail->Username   = 'contacto@fepac.com.mx';                     //SMTP username
+            $mail->Username   = 'reclutamiento@fepac.com.mx';                     //SMTP username
             $mail->Password   = $param;                              //SMTP password
             // $mail->SMTPSecure = 'tls';            //Enable implicit TLS encryption
             $mail->Port       = 587;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
@@ -99,7 +107,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             //Content
 
 
-            $subject = "FEPAC Mexico.";
+            $subject = "Registro de  reclutamiento FEPAC México.";
 
             $logo = 'img/logo/loder.png';
             $link = '#';
@@ -108,13 +116,13 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             $body .= "<table style='width: 100%;'>";
             $body .= "<thead style='text-align: center;'><tr><td style='border:none;' colspan='2'>";
             $body .= "<a href='{$link}'><img src='{$logo}' alt=''></a><br><br>";
-            $body .= "</td></tr></thead><tbody><tr>";
-            $body .= "<td style='border:none;'><strong>Nombre:</strong> {$name}</td>";
-            $body .= "<td style='border:none;'><strong>Correo electronico:</strong> {$from}</td>";
-            $body .= "</tr>";
-            $body .= "<tr><td style='border:none;'><strong>Asunto:</strong> {$subject}</td></tr>";
+            $body .= "</td></tr></thead><tbody>";
+            $body .= "<tr><td style='border:none;'><strong>Nombre:</strong> {$name}</td></tr>";
+            $body .= "<tr><td style='border:none;'><strong>Correo electrónico:</strong> {$Email}</td></tr>";
+            $body .= "<tr><td style='border:none;'><strong>Tema:</strong> {$Tema}</td></tr>";
+            $body .= "<tr><td style='border:none;'><strong>Ocupación:</strong> {$Ocupacion}</td></tr>";
+            $body .= "<tr><td style='border:none;'><strong>Acerca de:</strong> {$Acerca}</td></tr>";
             $body .= "<tr><td></td></tr>";
-            $body .= "<tr><td colspan='2' style='border:none;'>{$cmessage}</td></tr>";
             $body .= "</tbody></table>";
             $body .= "</body></html>";
 

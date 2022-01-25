@@ -16,4 +16,19 @@ class Params
 
         return $pwd;
     }
+
+    public function getrecpwd()
+    {
+        $archivo = "assets/files/email/reclutamiento.txt";
+        $f = fopen($archivo, "r");
+        $pwd = '';
+
+        if ($f) {
+           $b64pwd =fread($f, filesize($archivo)); 
+           $pwd = base64_decode($b64pwd);
+           fclose($f);
+        }
+
+        return $pwd;
+    }
 }
