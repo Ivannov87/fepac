@@ -19,7 +19,7 @@ class Params
 
     public function getrecpwd()
     {
-        $archivo = "assets/files/email/reclutamiento.txt";
+        $archivo = "assets/files/email/talento.txt";
         $f = fopen($archivo, "r");
         $pwd = '';
 

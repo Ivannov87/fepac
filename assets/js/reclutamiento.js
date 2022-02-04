@@ -58,7 +58,7 @@ $(document).ready(function(){
                 $(form).ajaxSubmit({
                     type:"POST",
                     data: $(form).serialize(),
-                    url:"reclutamiento.php",
+                    url:"talento.php",
                     success: function(data) {
                         // $('#contactForm :input').attr('disabled', 'disabled');
                         // $('#contactForm').fadeTo( "slow", 1, function() {

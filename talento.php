@@ -43,7 +43,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
 
     // // Verificamos los datos 
-    if (!is_null($token) && strlen($token) > 0) {
+    //if (!is_null($token) && strlen($token) > 0) {
         // if ($datos_respuesta["success"] == '1' && $datos_respuesta["action"] == $action && $datos_respuesta["score"] >= 0.4) {
 
         $Paterno = $_REQUEST['iap'];
@@ -61,7 +61,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $mail = new PHPMailer(true);
         $mail->CharSet = "UTF-8";
 
-        $to = "reclutamiento@fepac.com.mx";
+        $to = "talento@fepac.com.mx";
         $from = $Email;
         $name = $Paterno ." ". $Materno ." ".$Nombre;
         $subject = "Registro para reclutamiento";
@@ -71,7 +71,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $now = $dt->format("Y-m-d") . "T" . $dt->format("H:i:s");
         $reg = $Paterno . '|'.$Materno . '|'.$Nombre . '|' . $Email . '|' . $Tema . '|'.$Ocupacion . '|'.$Acerca . '|' . $now;
 
-        $archivo = "functions/reg_reclutamiento.txt";
+        $archivo = "functions/reg_talento.txt";
         $f = fopen($archivo, "a");
 
         if ($f) {
@@ -86,7 +86,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             $mail->isSMTP();                                            //Send using SMTP
             $mail->Host       = 'mail.fepac.com.mx';                     //Set the SMTP server to send through
             $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-            $mail->Username   = 'reclutamiento@fepac.com.mx';                     //SMTP username
+            $mail->Username   = 'talento@fepac.com.mx';                     //SMTP username
             $mail->Password   = $param;                              //SMTP password
             // $mail->SMTPSecure = 'tls';            //Enable implicit TLS encryption
             $mail->Port       = 587;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
@@ -97,7 +97,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             $mail->addAddress($to);     //Add a recipient
 
             $mail->addReplyTo($from);
-            // $mail->addCC('cc@example.com');
+            //$mail->addCC('enrique.dorantes@fepac.com.mx','Enrique Dorantes');
+            //$mail->addCC('endordiaz.2@hotmail.com','Enrique Dorantes');
+            //$mail->addCC('mario.saldana@fepac.com.mx','Mario Saldana');
+            $mail->addCC('ivan.renteria@fepac.com.mx','Ivan Renteria');
+
             // $mail->addBCC('bcc@example.com');
 
             // //Attachments
@@ -107,7 +111,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             //Content
 
 
-            $subject = "Registro de  reclutamiento FEPAC México.";
+            $subject = "Registro de  Talento FEPAC México.";
 
             $logo = 'img/logo/loder.png';
             $link = '#';
@@ -136,8 +140,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         } catch (Exception $e) {
             echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
         }
-    } else {
+    // } else {
 
-        echo 'Mensaje Enviado';
-    }
+    //     echo 'Mensaje Enviado';
+    // }
 }
