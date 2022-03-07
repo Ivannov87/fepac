@@ -97,11 +97,15 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             $mail->addAddress($to);     //Add a recipient
 
             $mail->addReplyTo($from);
-            //$mail->addCC('enrique.dorantes@fepac.com.mx','Enrique Dorantes');
-            //$mail->addCC('endordiaz.2@hotmail.com','Enrique Dorantes');
-            //$mail->addCC('mario.saldana@fepac.com.mx','Mario Saldana');
+            $mail->addCC('enrique.dorantes@fepac.com.mx','Enrique Dorantes');
+            $mail->addCC('endordiaz.2@hotmail.com','Enrique Dorantes');
+            $mail->addCC('mario.saldana@fepac.com.mx','Mario Saldana');
             $mail->addCC('ivan.renteria@fepac.com.mx','Ivan Renteria');
-
+            $mail->addCC('alfonsotorressaavedra@gmail.com','Alfonso Torres');
+            $mail->addCC('alfonso.torres@fepac.com.mx','Alfonso Torres');
+            //$mail->addCC('viridiana.campechano@fepac.com.mx','Viridiana Campechano');
+            //$mail->addCC('educacion@fepac.com.mx','Educacion FEPAC');
+            //$mail->addCC('talento@fepac.com.mx','Talento FEPAC');
             // $mail->addBCC('bcc@example.com');
 
             // //Attachments

@@ -181,7 +181,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <h2>La cadena de custodia como técnica de investigación científica.</h2>
+                        <h2>La grafoscopía y el entorno del perito particular.</h2>
 
 
                         <div class="col-lx-12 col-sm-12 justify-content-center">
@@ -199,7 +199,7 @@
                                         <div class="col-xl-4 col-sm-4">
                                             <button id="btnEnviar" type="button" class="btn red-btn2">Enviar</button>
                                         </div>
-                                        <p><span>Vigente hasta 9 de Febrero del 2022. </span></p>
+                                        <p><span>Vigente hasta 9 de Marzo del 2022. </span></p>
 
                                     </div>
 
@@ -303,14 +303,33 @@
                 try {
 
                     if (IsvalidEmail(email) && email.trim().length > 0) {
-                        url = "https://fepac.com.mx/constanciasfepac/" + email + ".pdf";
-                        // window.location.href = "https://fepac.com.mx/constanciasfepac/" + email + ".pdf";
+                        // url = "https://fepac.com.mx/constanciasfepac/";//+ email + ".pdf";
+                        // // window.location.href = "https://fepac.com.mx/constanciasfepac/" + email + ".pdf";
 
-                        var link = document.createElement('a');
-                        link.href = url;
-                        link.download = id;
-                        link.click();
-                        link.remove();
+                        // var link = document.createElement('a');
+                        // link.href = url;
+                        // link.download = email.trim() + ".pdf";
+                        // link.click();
+                        // link.remove();
+
+                        $.ajax({
+                            type: 'POST',
+                            url: 'verify.php',
+                            data: {'docto': email},
+                            success: function (data) {
+                                    //alert(JSON.stringify(data));
+                                    if (data == 'true') {
+                                        window.location.href = "https://fepac.com.mx/constanciasfepac/" +  email + ".pdf";
+                                    }
+                                    else
+                                    {
+                                        window.location.href = "https://fepac.com.mx/pages/notfound.html";
+                                    }
+                                }, error: function (data) {
+                                    //alert("error");
+                                    window.location.href = "https://fepac.com.mx/pages/notfound.html";
+                                }
+                            });
 
                     }
                     else {
